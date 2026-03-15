@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me | Md Raja</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #081b29; color: #fff; line-height: 1.6; }
+
+        .container { padding: 60px 10%; }
+        .back-link { color: #00abf0; text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: 600; }
+        
+        .hire-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        
+        /* Left Side: Professional Pitch */
+        .pitch h1 { font-size: 45px; color: #00abf0; margin-bottom: 15px; }
+        .pitch h2 { font-size: 22px; margin-bottom: 20px; color: #ededed; }
+        .pitch p { color: #ccc; margin-bottom: 25px; text-align: justify; }
+
+        .benefits { list-style: none; margin-bottom: 30px; }
+        .benefits li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 15px; }
+        .benefits li i { color: #00ff88; }
+
+        /* Right Side: Fast Contact Form */
+        .hire-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 171, 240, 0.3);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .hire-form h3 { margin-bottom: 25px; font-size: 24px; text-align: center; }
+        .input-box { margin-bottom: 20px; }
+        .input-box input, .input-box select, .input-box textarea {
+            width: 100%; padding: 12px; background: transparent; border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px; color: #fff; outline: none; transition: 0.3s;
+        }
+        .input-box input:focus, .input-box select:focus, .input-box textarea:focus { border-color: #00abf0; box-shadow: 0 0 10px #00abf0; }
+        
+        .submit-btn {
+            width: 100%; padding: 15px; background: #00abf0; border: none; border-radius: 8px;
+            color: #081b29; font-weight: 700; cursor: pointer; transition: 0.3s; font-size: 16px;
+        }
+        .submit-btn:hover { box-shadow: 0 0 20px #00abf0; transform: translateY(-3px); }
+
+        @media (max-width: 850px) { .hire-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+        <div class="hire-grid">
+            <div class="pitch">
+                <h1>Why Work <span>With Me?</span></h1>
+                <h2>A Fresh Perspective with Modern Skills</h2>
+                <p>As a Computer Science Engineering graduate from <strong>Sharda University</strong>, I bring up-to-date technical knowledge and a hungry-to-learn mindset. I don't just write code; I build solutions that bridge the gap between user needs and technical efficiency.</p>
+                
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i> <strong>Adaptability:</strong> Quick to learn and master new tech stacks.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Quality Code:</strong> Strong foundation in DS, Algorithms, and Clean Code.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Full Support:</strong> Available for long-term collaboration and maintenance.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Dedicated:</strong> 100% focus on project success and deadline.</li>
+                </ul>
+
+                <div class="contact-mini">
+                    <p><i class="fas fa-envelope" style="color:#00abf0"></i> mdraja.tech.03@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color:#00abf0"></i> Greater Noida, India</p>
+                </div>
+            </div>
+
+            <div class="hire-form">
+                <h3>Start a Conversation</h3>
+                <form action="https://formspree.io/f/mreyakab" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="Full Name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-box">
+                        <select name="Project Type">
+                            <option value="Web Development">Web Development</option>
+                            <option value="Java Project">Java Development</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Full Time Hiring">Full-Time Hiring</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="Message" placeholder="Tell me about your project or job role..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Proposal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -2,8 +2,6 @@
 
 Welcome to my personal portfolio repository! This project showcases my skills, projects, and experience as a developer in a sleek, responsive, and interactive way.
 
-[Click Here][
-
 ## ✨ Features
 
 **Fully Responsive:** Optimized for all screen sizes (Mobile, Tablet, and Desktop).
@@ -53,9 +51,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🤝 Contact
 
-**GitHub:** @mdrajatech03
+**GitHub :**  @mdrajatech03
 
-**Live Demo:** [Click here to view][(https//github.com.io/Portfolio/]
+**Live Demo :**  [Click here to view][https://mdrajatech03.github.io/Portfolio/]
 
 
 ## Screenshot 

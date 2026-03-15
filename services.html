@@ -166,6 +166,132 @@
         </div>
     </div>
 
+    <style>
+    /* Pricing Table Styles */
+    .pricing-header {
+        text-align: center;
+        margin: 80px 0 40px;
+    }
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+    }
+    .pricing-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 171, 240, 0.2);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: 0.4s;
+        position: relative;
+        overflow: hidden;
+    }
+    .pricing-card:hover {
+        border-color: #00abf0;
+        transform: translateY(-10px);
+        background: rgba(0, 171, 240, 0.1);
+    }
+    .pricing-card.popular {
+        border: 2px solid #00abf0;
+        box-shadow: 0 0 20px rgba(0, 171, 240, 0.3);
+    }
+    .popular-tag {
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: #00abf0;
+        color: #081b29;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .price {
+        font-size: 40px;
+        font-weight: 700;
+        color: #00abf0;
+        margin: 20px 0;
+    }
+    .price span { font-size: 18px; color: #ccc; }
+    .pricing-features {
+        list-style: none;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .pricing-features li {
+        margin-bottom: 12px;
+        font-size: 15px;
+        color: #eee;
+    }
+    .pricing-features li i {
+        color: #00ff88;
+        margin-right: 10px;
+    }
+    .buy-btn {
+        display: block;
+        padding: 12px;
+        background: transparent;
+        border: 2px solid #00abf0;
+        color: #00abf0;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .buy-btn:hover {
+        background: #00abf0;
+        color: #081b29;
+        box-shadow: 0 0 15px #00abf0;
+    }
+</style>
+
+<div class="pricing-header">
+    <h1>Service <span>Packages</span></h1>
+    <p>Choose a plan that fits your needs.</p>
+</div>
+
+<div class="pricing-grid">
+    <div class="pricing-card">
+        <h3>Graphic Design</h3>
+        <div class="price">$49<span>/Project</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Logo Design (2 Concepts)</li>
+            <li><i class="fas fa-check"></i> Social Media Kit</li>
+            <li><i class="fas fa-check"></i> High-Res Files (PNG/JPG)</li>
+            <li><i class="fas fa-times" style="color: #ff4d4d;"></i> Source Files (AI/PSD)</li>
+        </ul>
+        <a href="contact.html" class="buy-btn">Choose Plan</a>
+    </div>
+
+    <div class="pricing-card popular">
+        <div class="popular-tag">BEST VALUE</div>
+        <h3>Web Development</h3>
+        <div class="price">$199<span>/Site</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Responsive 5-Page Website</li>
+            <li><i class="fas fa-check"></i> SEO Optimization</li>
+            <li><i class="fas fa-check"></i> Contact Form Integration</li>
+            <li><i class="fas fa-check"></i> Free Hosting Setup</li>
+        </ul>
+        <a href="contact.html" class="buy-btn" style="background: #00abf0; color: #081b29;">Get Started</a>
+    </div>
+
+    <div class="pricing-card">
+        <h3>Full Stack Solution</h3>
+        <div class="price">$499<span>/Project</span></div>
+        <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Custom Web Application</li>
+            <li><i class="fas fa-check"></i> Database Integration</li>
+            <li><i class="fas fa-check"></i> Admin Dashboard</li>
+            <li><i class="fas fa-check"></i> 3 Months Support</li>
+        </ul>
+        <a href="contact.html" class="buy-btn">Choose Plan</a>
+    </div>
+</div>
+    
+
     <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
 </div>
 

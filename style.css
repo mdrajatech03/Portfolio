@@ -998,83 +998,95 @@ footer a i {
 }
 
 @media(max-width:768px) {
+
     header {
         padding: 12px 5%;
-        background: var(--bg-color);
     }
+
 
     section {
         padding: 50px 5% !important; 
     }
 
-    /* Home Section Layout */
     .home {
         padding-top: 140px !important; 
-        display: flex !important; 
-        flex-direction: column !important; 
-        align-items: center !important;
-        text-align: center !important;
-        height: auto !important;
-        min-height: 100vh;
-        gap: 2rem;
+        min-height: auto !important;
+        gap: 1rem; 
+
+          .home-content {
+        margin-top: 0;
+          }
+    }
+    #menu-icon {
+        display: block;
+        transition: all .4s ease;
     }
 
-    /* Image Container Fix */
-    .home-image, .home-img, .img-box {
-        display: block !important; 
-        order: 1 !important; 
-        width: 100% !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+    #menu-icon.bx-x {
+        transform: rotate(-180deg);
     }
 
-    /* Actual Image Fix */
-    .home-image img, .home-img img, .img-box img {
-        width: 100% !important;
-        max-width: 280px !important; 
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-
-    /* Text Content Fix */
-    .home-content {
-        order: 2 !important; 
-        width: 100% !important;
-    }
-
-    .home-content h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.2;
-    }
-
-    .btn-box {
-        margin: 25px auto;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Menu Fix */
     .navlist {
+        display: flex;
         position: absolute;
         top: -1000px;
+        right: 0;
         left: 0;
-        width: 100%;
-        background: var(--bg-color);
         flex-direction: column;
-        padding: 20px 5%;
-        transition: 0.4s;
+        background: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all .45s ease;
+    }
+
+    .navlist a {
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
     }
 
     .navlist.open {
         top: 100%;
     }
 
-    #menu-icon {
-        display: block;
+
+    .home-image {
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .liquid-shape {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+
+    .liquid-shape1 {
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .skill-main {
+        grid-template-columns: 1fr;
+    }
+
+    .fillter-buttons {
+        margin: 2.5rem 0;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+
+    .social-icons {
+        margin-top: 1.5rem;
     }
 }
-
 
 @media(max-width:420px) {
     html {

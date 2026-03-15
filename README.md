@@ -36,7 +36,7 @@ Welcome to my personal portfolio repository! This project showcases my skills, p
 
 **1. Clone the repository:**
 
-git clone https://github.com/mdrajatech03/Portfolio.git
+git clone : --> https://github.com/mdrajatech03/Portfolio.git
    
 
 **2. Navigate to the folder:**
@@ -51,9 +51,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🤝 Contact
 
-**GitHub :**  @mdrajatech03
+**[GitHub](https://github.com/mdrajatech03)**
 
-**Live Demo :**  [Click here to view](https://mdrajatech03.github.io/Portfolio/)
+**Live Demo : [Click here to view](https://mdrajatech03.github.io/Portfolio/)**
 
 
 ## Screenshot 

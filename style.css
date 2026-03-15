@@ -1001,6 +1001,7 @@ footer a i {
 
     header {
         padding: 12px 5%;
+        z-index: 1000;
     }
 
 
@@ -1009,7 +1010,7 @@ footer a i {
     }
 
     .home {
-        padding-top: 80px !important; 
+        padding-top: 100px !important; 
         min-height: auto !important;
         gap: 1rem; 
 

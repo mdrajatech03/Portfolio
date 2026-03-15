@@ -1050,11 +1050,6 @@ footer a i {
         top: 100%;
     }
 
-    .home {
-        padding-top: 70px !important;
-        min-height: auto;
-        grid-template-columns: 1fr;
-    }
 
     .home-image {
         margin-top: 0rem;

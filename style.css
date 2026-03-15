@@ -997,34 +997,47 @@ footer a i {
     }
 }
 
+/* --- Mobile Overlap Fix Start --- */
 @media(max-width:768px) {
-
     header {
         padding: 12px 5%;
-        z-index: 1000;
+        background: var(--bg-color); /* Background solid rakhein taaki text overlap na dikhe */
     }
-
 
     section {
         padding: 50px 5% !important; 
     }
 
     .home {
-        padding-top: 100px !important; 
-        min-height: auto !important;
-        gap: 1rem; 
-
-          .home-content {
-        margin-top: 0;
-          }
-    }
-    #menu-icon {
-        display: block;
-        transition: all .4s ease;
+        padding-top: 140px !important; /* Logo aur Hero text ke beech gap badhane ke liye */
+        grid-template-columns: 1fr !important; /* 2 columns ko 1 column mein badla */
+        text-align: center;
+        gap: 2rem;
+        min-height: auto;
     }
 
-    #menu-icon.bx-x {
-        transform: rotate(-180deg);
+    .home-content {
+        order: 2; /* Text ko image ke neeche laane ke liye */
+        max-width: 100%;
+    }
+
+    .home-image {
+        order: 1; /* Image ko upar laane ke liye */
+        margin-bottom: 1rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem !important; /* Font size chota kiya taaki screen par fit aaye */
+        margin-top: 10px;
+    }
+
+    .btn-box {
+        margin: 20px auto; /* Buttons ko center karne ke liye */
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin: 1.5rem auto;
     }
 
     .navlist {
@@ -1035,59 +1048,19 @@ footer a i {
         left: 0;
         flex-direction: column;
         background: var(--bg-color);
-        text-align: left;
         padding: 0 5%;
         transition: all .45s ease;
-    }
-
-    .navlist a {
-        display: block;
-        padding-bottom: 1rem;
-        font-size: 1rem;
     }
 
     .navlist.open {
         top: 100%;
     }
 
-
-    .home-image {
-        margin-top: 0rem;
-        margin-bottom: 2rem;
-    }
-
-    .liquid-shape {
-        width: 80%;
-        left: 10%;
-        top: 10%;
-    }
-
-    .liquid-shape1 {
-        width: 80%;
-        left: 10%;
-        top: 30%;
-    }
-
-    .about {
-        flex-direction: column-reverse;
-    }
-
-    .skill-main {
-        grid-template-columns: 1fr;
-    }
-
-    .fillter-buttons {
-        margin: 2.5rem 0;
-    }
-
-    footer p {
-        font-size: .8rem;
-    }
-
-    .social-icons {
-        margin-top: 1.5rem;
+    #menu-icon {
+        display: block;
     }
 }
+/* --- Mobile Overlap Fix End --- */
 
 @media(max-width:420px) {
     html {

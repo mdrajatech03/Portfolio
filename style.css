@@ -445,9 +445,9 @@ section {
 
 .liquid-shape, .liquid-shape1 {
     opacity: 1 !important;
-    display: block !important;
-    transform: none !important;
+    transform: scale(1) !important;
     visibility: visible !important;
+    display: block !important;
 }
 
 

@@ -443,12 +443,6 @@ section {
     filter: blur(50px);
 }
 
-.liquid-shape, .liquid-shape1 {
-    opacity: 1 !important;
-    transform: scale(1) !important;
-    visibility: visible !important;
-    display: block !important;
-}
 
 
 

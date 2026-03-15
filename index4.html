@@ -3,89 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Tech Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Project Details | Md Raja</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #081b29; color: #fff; line-height: 1.6; }
+
+        .project-header {
+            height: 40vh;
+            background: linear-gradient(rgba(0, 171, 240, 0.3), #081b29), url('image1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container { padding: 50px 10%; }
+        .back-link { color: #00abf0; text-decoration: none; font-weight: 600; margin-bottom: 20px; display: inline-block; }
+        
+        h1 { font-size: 40px; color: #00abf0; margin-bottom: 10px; }
+        .tech-stack { margin-bottom: 30px; }
+        .badge {
+            background: rgba(0, 171, 240, 0.2);
+            color: #00abf0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 10px;
+            border: 1px solid #00abf0;
+        }
+
+        .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .description h2 { color: #00abf0; margin-bottom: 15px; }
+        .description p { color: #ccc; margin-bottom: 20px; text-align: justify; }
+
+        .project-links {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 171, 240, 0.2);
+            height: fit-content;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #00abf0;
+            color: #081b29;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .btn:hover { box-shadow: 0 0 20px #00abf0; }
+        .btn-outline { background: transparent; color: #00abf0; border: 2px solid #00abf0; }
+
+        @media (max-width: 768px) { .content-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
 
-    <canvas id="particleCanvas"></canvas>
-
-    <header>
-        <h2 class="logo">RAJA<span>TECH</span></h2>
-        <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="general.html">About</a>
-            <a href="general.html">Service</a>
-            <button class="btnLogin-popup">Login</button>
-        </nav>
+    <header class="project-header">
+        <div>
+            <h1>Bluetooth Controlled Car</h1>
+            <p>Robotics & IoT Project</p>
+        </div>
     </header>
 
-    <div class="wrapper">
-        <div class="window-controls">
-            <span class="icon-minimize"><i class="fa-solid fa-minus"></i></span>
-            <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+    <div class="container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+        <div class="tech-stack">
+            <span class="badge">Arduino</span>
+            <span class="badge">C++</span>
+            <span class="badge">HC-05 Bluetooth</span>
+            <span class="badge">Embedded Systems</span>
         </div>
 
-        <div class="form-container">
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form id="loginForm">
-                    <div class="input-group">
-                        <label>Email</label>
-                        <div class="field">
-                            <input type="email" id="logEmail" placeholder="example@gmail.com" required>
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Password</label>
-                        <div class="field">
-                            <input type="password" id="logPass" placeholder="••••••••" required>
-                            <i class="fa-solid fa-eye-slash toggle-password" data-target="logPass"></i>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="profile.html" class="register-link">Register</a></p>
-                    </div>
-                </form>
+        <div class="content-grid">
+            <div class="description">
+                <h2>Project Overview</h2>
+                <p>This project is a Bluetooth-controlled robot car designed using Arduino. It allows users to control the car's movement (Forward, Backward, Left, Right) wirelessly through a smartphone application. It uses an HC-05 Bluetooth module for communication and an L298N motor driver to control the DC motors.</p>
+                
+                <h2>Key Features</h2>
+                <ul style="margin-left: 20px; color: #ccc;">
+                    <li>Wireless range of up to 10 meters.</li>
+                    <li>Real-time response with zero latency.</li>
+                    <li>Dual speed control modes.</li>
+                    <li>Obstacle detection capability (optional upgrade).</li>
+                </ul>
             </div>
 
-            <div class="form-box register">
-                <h2>Registration</h2>
-                <form id="regForm">
-                    <div class="input-group">
-                        <label>Username</label>
-                        <div class="field">
-                            <input type="text" id="regUser" placeholder="Enter username" required>
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Email</label>
-                        <div class="field">
-                            <input type="email" id="regEmail" placeholder="example@gmail.com" required>
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>Password</label>
-                        <div class="field">
-                            <input type="password" id="regPass" placeholder="Create password" required>
-                            <i class="fa-solid fa-eye-slash toggle-password" data-target="regPass"></i>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account? <a href="wlcmpage.html" class="login-link">Login</a></p>
-                    </div>
-                </form>
+            <div class="project-links">
+                <h3>Project Resources</h3>
+                <p style="font-size: 14px; color: #888; margin-bottom: 20px;">Get the source code and documentation.</p>
+                <a href="#" class="btn">View Github Repo</a>
+                <a href="#" class="btn btn-outline">Watch Demo Video</a>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>

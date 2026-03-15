@@ -443,6 +443,13 @@ section {
     filter: blur(50px);
 }
 
+.liquid-shape, .liquid-shape1 {
+    opacity: 1 !important;
+    display: block !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
 
 
 /* services section css---------------------------------*/

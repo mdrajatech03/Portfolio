@@ -133,29 +133,3 @@ scrollBottom.forEach((e1)=>observer.observe(e1));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((e1)=>observer.observe(e1));
-
-
-const contactForm = document.getElementById('my-form');
-
-if(contactForm) {
-    contactForm.addEventListener("submit", function(e) {
-        e.preventDefault(); // Ye line "Go Back" page ko rok degi
-        
-        const data = new FormData(contactForm);
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                alert("Success! Your message has been sent.");
-                contactForm.reset(); // Form khali ho jayega
-            } else {
-                alert("Oops! Something went wrong.");
-            }
-        });
-    });
-}
-

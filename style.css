@@ -1032,7 +1032,10 @@ footer a i {
         top: 100%;
     }
 
-
+    .home {
+        padding-top: 100px;
+        grid-template-columns: 1fr;
+    }
     
 
     .home-image {

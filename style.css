@@ -997,80 +997,18 @@ footer a i {
     }
 }
 
+
+
 @media(max-width:768px) {
-    header {
-        padding: 12px 5%;
-        background: var(--bg-color);
-    }
-
-    section {
-        padding: 50px 5% !important; 
-    }
-
-    .home {
-        padding-top: 100px !important; 
-        display: flex !important; /* Grid hata kar flex kiya layout fix karne ke liye */
-        flex-direction: column !important; 
-        align-items: center;
-        text-align: center;
-        gap: 3rem;
-        height: auto !important;
-    }
-
-    /* Image Container Fix */
-    .home-image {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        width: 100% !important;
-        order: 1; /* Image ko text ke upar lane ke liye */
-        position: relative;
-        z-index: 1;
-        margin-bottom: 20px;
-    }
-
-    .img-box {
-        width: 100%;
-        max-width: 300px; /* Mobile size */
-        margin: 0 auto;
-        position: relative;
-        z-index: 5; /* Image ko shape ke upar rakhne ke liye */
-    }
-
-    .img-box img {
-        width: 100%;
-        height: auto;
+    #menu-icon {
         display: block;
+        transition: all .4s ease;
     }
 
-    /* Liquid Shape Fix for Mobile */
-    .liquid-shape {
-        width: 100% !important;
-        height: 100% !important;
-        left: 0 !important;
-        top: 0 !important;
-        z-index: -1;
-        display: block !important; /* Ensure visibility */
+    #menu-icon.bx-x {
+        transform: rotate(-180deg);
     }
 
-    .home-content {
-        order: 2; /* Text niche aayega */
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .home-content h1 {
-        font-size: 2.2rem !important;
-    }
-
-    .btn-box {
-        width: 100%;
-        justify-content: center;
-        gap: 15px;
-        margin: 20px 0;
-    }
-
-    /* Menu Fix */
     .navlist {
         display: flex;
         position: absolute;
@@ -1079,21 +1017,57 @@ footer a i {
         left: 0;
         flex-direction: column;
         background: var(--bg-color);
-        padding: 20px 5%;
+        text-align: left;
+        padding: 0 5%;
         transition: all .45s ease;
-        z-index: 999;
+    }
+
+    .navlist a {
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
     }
 
     .navlist.open {
         top: 100%;
     }
 
-    #menu-icon {
-        display: block;
+    .home {
+        grid-template-columns: 1fr;
+    }
+
+    .home-image {
+        margin-bottom: 5rem;
+    }
+
+    .liquid-shape {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+    }
+
+    .liquid-shape1 {
+        width: 80%;
+        left: 10%;
+        top: 30%;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .skill-main {
+        grid-template-columns: 1fr;
+    }
+
+    .fillter-buttons {
+        margin: 2.5rem 0;
+    }
+
+    footer p {
+        font-size: .8rem;
     }
 }
-
-
 
 
 @media(max-width:420px) {

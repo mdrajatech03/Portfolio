@@ -522,6 +522,36 @@
         <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
      </footer>
 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+(function() {
+    // Left menu -> Account -> API Keys se apni Public Key yahan dalein
+    emailjs.init("GFinUe87kRtSrUttm"); 
+})();
+
+window.onload = function() {
+    // Dhyan dein: aapke form ki ID 'my-form' honi chahiye
+    document.getElementById('my-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const serviceID = 'service_s8paa0e';
+        const templateID = 'template_5c2c9mn';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(function() {
+                alert('Success! Raja ko message mil gaya aur aapko auto-reply bhej diya gaya hai.');
+                document.getElementById('my-form').reset();
+            }, function(error) {
+                alert('Failed... Error: ' + JSON.stringify(error));
+            });
+    });
+}
+</script>
+
+    
+
     <script src="mixitup.min.js"></script>
     <script src="script.js"></script>
 </body>

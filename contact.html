@@ -221,26 +221,33 @@ form.addEventListener("submit", function(event) {
     const userTemplate = 'template_ue7wa86';
 
     const btn = document.querySelector(".submit-btn");
+    const originalBtnContent = btn.innerHTML;
     btn.innerText = "Sending...";
 
+    // Save 'this' in a variable to use inside promises
+    const currentForm = this;
+
     // 1. Raja ko email jayega
-    emailjs.sendForm(serviceID, adminTemplate, this)
+    emailjs.sendForm(serviceID, adminTemplate, currentForm)
         .then(() => {
-            // 2. User ko reply jayega
-            return emailjs.sendForm(serviceID, userTemplate, this);
+            console.log("Admin email success");
+            // 2. User ko reply jayega (Yahan 'currentForm' pass karna zaroori hai)
+            return emailjs.sendForm(serviceID, userTemplate, currentForm);
         })
         .then(() => {
             alert("Thank you! Your message has been sent successfully.");
             form.reset();
-            btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+            btn.innerHTML = originalBtnContent;
         })
         .catch((err) => {
-            alert("Oops! Something went wrong.");
-            console.log(err);
-            btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+            // Error details console mein dekhne ke liye
+            console.error("EmailJS Error:", err);
+            alert("Oops! Something went wrong. Error: " + (err.text || "Unknown error"));
+            btn.innerHTML = originalBtnContent;
         });
 });
-    </script>
+</script>
+    
     
     
     

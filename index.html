@@ -532,19 +532,21 @@
 
 <script type="text/javascript">
 (function() {
-    // Aapki Public Key
+    // Public Key
     emailjs.init("GFinUe87kRtSrUttm"); 
 })();
 
-window.onload = function() {
+// Window onload ki jagah ye use karein taaki turant load ho
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('my-form');
     if(form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Aapki Dashboard IDs
             const serviceID = 'service_s8paa0e';
             const templateID = 'template_5c2c9mn';
+
+            console.log("Sending..."); // Debugging ke liye
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(function() {
@@ -554,9 +556,12 @@ window.onload = function() {
                     alert('Error: ' + JSON.stringify(error));
                 });
         });
+    } else {
+        console.log("Form ID 'my-form' nahi mili!");
     }
-}
+});
 </script>
+    
     
     
     

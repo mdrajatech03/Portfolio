@@ -53,7 +53,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **[GitHub](https://github.com/mdrajatech03)**
 
-**Live Demo : [Click here to view]**(https://portfolio-pi-seven-mejjotg9ga.vercel.app/)**
+**Live Demo : [Click here to view](https://portfolio-pi-seven-mejjotg9ga.vercel.app/)**
 
 
 ## Screenshot 
